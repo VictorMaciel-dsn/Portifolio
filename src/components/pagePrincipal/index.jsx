@@ -2,6 +2,37 @@ import imgProfile from '../../assets/img/profile.png';
 import TypingEffect from '../efeitoDigitacao';
 
 function PagePrincipalComponent() {
+  
+  function isOpen(type) {
+    switch (type) {
+      case 'contact':
+        window.open('https://wa.link/js73df');
+        break;
+      case 'openCV':
+        window.open(
+          'https://drive.google.com/file/d/18AnxL1D_XSF4xwXMjAs4zq3t392-yVQK/view?usp=sharing',
+        );
+        break;
+      case 'openInstagram':
+        window.open(
+          'https://instagram.com/oliveira.victor1?igshid=YTQwZjQ0NmI0OA==',
+        );
+        break;
+      case 'openLinkedin':
+        window.open('https://www.linkedin.com/in/victor-maciel-5a90991a3/');
+        break;
+      case 'openWhatsapp':
+        window.open('https://wa.link/js73df');
+        break;
+      case 'openGithub':
+        window.open('https://github.com/VictorMaciel-dsn');
+        break;
+
+      default:
+        break;
+    }
+  }
+
   return (
     <div className="pageprincipal-component">
       <section className="featured-box" id="home">
@@ -21,22 +52,24 @@ function PagePrincipalComponent() {
             </p>
           </div>
           <div className="featured-text-btn">
-            <button className="btn blue-btn">Contrate-me</button>
-            <button className="btn">
+            <button className="btn blue-btn" onClick={() => isOpen('contact')}>
+              Contrate-me
+            </button>
+            <button className="btn" onClick={() => isOpen('openCV')}>
               Visualizar CV <i className="pi pi-file-pdf"></i>
             </button>
           </div>
           <div className="social_icons">
-            <div className="icon">
+            <div className="icon" onClick={() => isOpen('openInstagram')}>
               <i className="pi pi-instagram"></i>
             </div>
-            <div className="icon">
+            <div className="icon" onClick={() => isOpen('openLinkedin')}>
               <i className="pi pi-linkedin"></i>
             </div>
-            <div className="icon">
+            <div className="icon" onClick={() => isOpen('openWhatsapp')}>
               <i className="pi pi-whatsapp"></i>
             </div>
-            <div className="icon">
+            <div className="icon" onClick={() => isOpen('openGithub')}>
               <i className="pi pi-github"></i>
             </div>
           </div>
