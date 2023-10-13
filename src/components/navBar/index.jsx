@@ -61,18 +61,6 @@ function NavBarComponent() {
             </li>
             <li className="nav_list">
               <a
-                href="#projects"
-                className={`nav-link ${
-                  activeLink === 'projects' ? 'active-link' : ''
-                }`}
-                onClick={() => handleNavLinkClick('projects')}
-              >
-                Projetos
-              </a>
-              <div className="circle"></div>
-            </li>
-            <li className="nav_list">
-              <a
                 href="#contact"
                 className={`nav-link ${
                   activeLink === 'contact' ? 'active-link' : ''

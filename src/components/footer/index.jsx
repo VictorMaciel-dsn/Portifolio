@@ -62,24 +62,13 @@ function FooterComponent() {
             </li>
             <li className="footer_menu_list">
               <a
-                href="#projects"
-                className={`footer-link ${
-                  activeLink === 'projects' ? 'active-link' : ''
-                }`}
-                onClick={() => handleFooterLinkClick('projects')}
-              >
-                Projetos
-              </a>
-            </li>
-            <li className="footer_menu_list">
-              <a
                 href="#contact"
                 className={`footer-link ${
                   activeLink === 'contact' ? 'active-link' : ''
                 }`}
                 onClick={() => handleFooterLinkClick('contact')}
               >
-                Contatos
+                Contato
               </a>
             </li>
           </ul>
