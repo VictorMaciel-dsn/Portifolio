@@ -8,12 +8,18 @@ function PageSobreComponent() {
   return (
     <div className="pagesobre-component">
       <section id="about">
-        <div className="top-header">
+        <div
+          className="top-header wow animate__animated animate__fadeInUp"
+          data-wow-delay="0.2s"
+        >
           <h1>Sobre mim</h1>
         </div>
         <div className="row">
           <div className="col">
-            <div className="about-info">
+            <div
+              className="about-info wow animate__animated animate__fadeInUp"
+              data-wow-delay="0.4s"
+            >
               <h3>Minha apresentação</h3>
               <p>
                 Sou um profissional com sólido conhecimento em tecnologias web,
@@ -37,7 +43,10 @@ function PageSobreComponent() {
             </div>
           </div>
           <div className="col">
-            <div className="skills-box">
+            <div
+              className="skills-box wow animate__animated animate__fadeInUp"
+              data-wow-delay="0.5s"
+            >
               <div className="skills-header">
                 <h3>Hard Skills</h3>
               </div>
@@ -68,7 +77,10 @@ function PageSobreComponent() {
                 <span>Cursando Ciência da computação (8/8)</span>
               </div>
             </div>
-            <div className="skills-box">
+            <div
+              className="skills-box wow animate__animated animate__fadeInUp"
+              data-wow-delay="0.6s"
+            >
               <div className="skills-header">
                 <h3>Soft Skills</h3>
               </div>

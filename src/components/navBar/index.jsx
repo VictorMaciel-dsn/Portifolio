@@ -1,8 +1,41 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function NavBarComponent() {
   const [iconMenu, setIconMenu] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
+  const [isNavigating, setIsNavigating] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!isNavigating) {
+        const aboutSection = document.getElementById('about');
+        const contactSection = document.getElementById('contact');
+        const scrollTop = window.scrollY;
+
+        if (
+          aboutSection &&
+          contactSection &&
+          scrollTop >= aboutSection.offsetTop - 200 &&
+          scrollTop < contactSection.offsetTop - 200
+        ) {
+          setActiveLink('about');
+        } else if (
+          contactSection &&
+          scrollTop >= contactSection.offsetTop - 200
+        ) {
+          setActiveLink('contact');
+        } else {
+          setActiveLink('home');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [activeLink, isNavigating]);
 
   function myMenu() {
     const menuBtn = document.getElementById('myNavMenu');
@@ -23,13 +56,18 @@ function NavBarComponent() {
   }
 
   function handleNavLinkClick(section) {
+    setIsNavigating(true);
     setActiveLink(section);
+
+    setTimeout(() => {
+      setIsNavigating(false);
+    }, 500);
   }
 
   return (
     <div className="navbar-component">
       <nav id="header">
-        <div className="nav-logo">
+        <div className="nav-logo wow animate__animated animate__bounceInLeft">
           <p className="nav-name">Victor</p>
           <span>.</span>
         </div>
@@ -73,12 +111,12 @@ function NavBarComponent() {
             </li>
           </ul>
         </div>
-        <div className="nav-button">
+        <div className="nav-button wow animate__animated animate__bounceInRight">
           <button className="btn" onClick={() => openCV()}>
             Visualizar CV <i className="pi pi-file-pdf"></i>
           </button>
         </div>
-        <div className="nav-menu-btn">
+        <div className="nav-menu-btn wow animate__animated animate__bounceInRight">
           {iconMenu ? (
             <i className="pi pi-times" onClick={() => myMenu()}></i>
           ) : (

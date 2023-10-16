@@ -1,7 +1,32 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function FooterComponent() {
   const [activeLink, setActiveLink] = useState('contact');
+
+  useEffect(() => {
+    function isContactSectionNearBottom() {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        const rect = contactSection.getBoundingClientRect();
+        return rect.bottom <= window.innerHeight;
+      }
+      return false;
+    }
+
+    function handleScroll() {
+      if (isContactSectionNearBottom()) {
+        setActiveLink('contact');
+      } else {
+        setActiveLink('home');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   function isOpen(type) {
     switch (type) {
@@ -32,12 +57,18 @@ function FooterComponent() {
   return (
     <div className="footer-component">
       <footer>
-        <div className="top-footer">
+        <div
+          className="top-footer wow animate__animated animate__fadeIn"
+          data-wow-delay="0.4s"
+        >
           <p>Victor</p>
           <span>.</span>
         </div>
         <div className="middle-footer">
-          <ul className="footer-menu">
+          <ul
+            className="footer-menu wow animate__animated animate__fadeIn"
+            data-wow-delay="0.5s"
+          >
             <li className="footer_menu_list">
               <a
                 href="#home"
@@ -73,7 +104,10 @@ function FooterComponent() {
             </li>
           </ul>
         </div>
-        <div className="footer-social-icons">
+        <div
+          className="footer-social-icons wow animate__animated animate__fadeIn"
+          data-wow-delay="0.6s"
+        >
           <div className="icon" onClick={() => isOpen('openInstagram')}>
             <i className="pi pi-instagram"></i>
           </div>
@@ -87,7 +121,10 @@ function FooterComponent() {
             <i className="pi pi-github"></i>
           </div>
         </div>
-        <div className="bottom-footer">
+        <div
+          className="bottom-footer wow animate__animated animate__fadeIn"
+          data-wow-delay="0.7s"
+        >
           <p>
             Copyright &copy; <span>Victor Maciel</span> - Todos os direitos
             reservados
