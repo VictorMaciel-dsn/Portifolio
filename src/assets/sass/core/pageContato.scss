@@ -36,15 +36,15 @@
             var(--color-white) 0px 30px 60px -30px;
         overflow: hidden;
         transition: transform 0.2s;
-        
-            &:hover {
-                cursor: pointer;
-                transform: scale(1.1);
-            }
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
         }
-        
-        form {
-            width: 100%;
+    }
+
+    form {
+        width: 100%;
     }
 
     .contact-info > h2 {

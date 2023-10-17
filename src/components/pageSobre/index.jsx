@@ -22,18 +22,18 @@ function PageSobreComponent() {
             >
               <h3>Minha apresentação</h3>
               <p>
-                Sou um profissional com sólido conhecimento em tecnologias web,
-                incluindo JavaScript, ReactJS, Sass, Bootstrap, TypeScript, Vite
-                e Webpack. Tenho experiência em metodologias ágeis como Scrum e
-                sou habilidoso em design web, com conhecimento em HTML5 e CSS3.
-                Além disso, possuo expertise em integração com API's,
-                versionamento com Git e ferramentas como GitLab, Git Flow, Jira
-                e Jenkins. Minha formação em Ciência da Computação e
-                familiaridade com Linux e PostgreSQL complementam minhas
-                habilidades técnicas. Sou proativo, organizado, comunicativo, e
-                trabalho bem em equipe. Tenho facilidade em aprender e um
-                espírito empreendedor. Além disso, estou sempre disposto a me
-                adaptar a novos desafios e ambientes.
+                Sou um profissional com um sólido conhecimento em tecnologias
+                web, incluindo; HTML5, CSS3, JavaScript, ReactJS, Sass,
+                Bootstrap, TypeScript, Vite e Webpack. Tenho experiência em
+                metodologias ágeis, como Scrum. Também sou habilidoso em design
+                web. Além disso, tenho expertise em integração com APIs,
+                versionamento com Git e utilização de ferramentas como GitLab,
+                Git Flow, Jira e Jenkins. Minha formação em Ciência da
+                Computação e familiaridade com Linux e PostgreSQL complementam
+                minhas habilidades técnicas. Sou proativo, organizado,
+                comunicativo e trabalho bem em equipe. Tenho facilidade em
+                aprender e um espírito empreendedor. Além disso, estou sempre
+                disposto a me adaptar a novos desafios e ambientes.
               </p>
               <div className="about-btn">
                 <button className="btn" onClick={() => openCV()}>

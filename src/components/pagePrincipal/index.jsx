@@ -40,7 +40,7 @@ function PagePrincipalComponent() {
             className="featured-text-card wow animate__animated animate__fadeInUp"
             data-wow-delay="0.2s"
           >
-            <span>Victor Maciel</span>
+            <span>Victor Maciel Oliveira</span>
           </div>
           <div
             className="featured-name wow animate__animated animate__fadeInUp"
@@ -55,8 +55,8 @@ function PagePrincipalComponent() {
             data-wow-delay="0.6s"
           >
             <p>
-              Desenvolvedor front-end experiente e apaixonado por criar sites
-              visualmente impressionantes e fáceis de usar.
+              Desenvolvedor front-end apaixonado por criar websites que se
+              destacam visualmente e são simples de navegar.
             </p>
           </div>
           <div
@@ -64,7 +64,7 @@ function PagePrincipalComponent() {
             data-wow-delay="0.8s"
           >
             <button className="btn blue-btn" onClick={() => isOpen('contact')}>
-              Contacte-me
+              Contate-me
             </button>
             <button className="btn" onClick={() => isOpen('openCV')}>
               Visualizar CV <i className="pi pi-file-pdf"></i>

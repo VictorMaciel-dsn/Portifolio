@@ -72,7 +72,7 @@ function NavBarComponent() {
           <span>.</span>
         </div>
         <div className="nav-menu" id="myNavMenu">
-          <ul className="nav_menu_list">
+          <ul className="nav_menu_list wow animate__animated animate__fadeIn">
             <li className="nav_list">
               <a
                 href="#home"
