@@ -24,4 +24,4 @@ Este é o meu portfólio, um projeto web desenvolvido com Javascript, ReactJS, V
 
 ## Visualização do projeto
 
-Este projeto estará vinculado ao GitHub Pages. Acesso disponível em:
+Este projeto estará vinculado ao GitHub Pages. Acesso disponível em: https://victormaciel-dsn.github.io/Portifolio/ 
