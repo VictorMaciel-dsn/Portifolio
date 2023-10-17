@@ -1,5 +1,6 @@
 {
-  "name": "menu-luggs",
+  "homepage": "https://victormaciel-dsn.github.io/Portifolio",
+  "name": "portifolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,10 +8,13 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "gh-pages": "^6.0.0",
     "primeicons": "^6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
