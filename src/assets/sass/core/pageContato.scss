@@ -174,5 +174,18 @@
         .contact-info > p {
             font-size: 12px;
         }
+        .contact-info > h2 {
+            font-size: 20px;
+        }
+
+        @media only screen and (min-width: 360px) and (max-width: 360px) and (min-height: 740px) and (max-height: 740px) {
+            .contact-info > p {
+                font-size: 10px;
+            }
+
+            .contact-info > h2 {
+                font-size: 18px;
+            }
+        }
     }
 }

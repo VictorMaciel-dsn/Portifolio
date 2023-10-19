@@ -4,6 +4,7 @@ function NavBarComponent() {
   const [iconMenu, setIconMenu] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
   const [isNavigating, setIsNavigating] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,9 +39,10 @@ function NavBarComponent() {
   }, [activeLink, isNavigating]);
 
   function myMenu() {
+    setIsMenuOpen(!isMenuOpen);
     const menuBtn = document.getElementById('myNavMenu');
 
-    if (menuBtn.className === 'nav-menu') {
+    if (menuBtn.className === 'nav-menu ') {
       menuBtn.className += ' responsive';
       setIconMenu(true);
     } else {
@@ -60,6 +62,8 @@ function NavBarComponent() {
     setActiveLink(section);
 
     setTimeout(() => {
+      setIsMenuOpen(false);
+      setIconMenu(false);
       setIsNavigating(false);
     }, 500);
   }
@@ -71,7 +75,10 @@ function NavBarComponent() {
           <p className="nav-name">Victor</p>
           <span>.</span>
         </div>
-        <div className="nav-menu" id="myNavMenu">
+        <div
+          className={`nav-menu ${isMenuOpen ? 'responsive' : ''}`}
+          id="myNavMenu"
+        >
           <ul className="nav_menu_list wow animate__animated animate__fadeIn">
             <li className="nav_list">
               <a
