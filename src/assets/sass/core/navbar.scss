@@ -1,4 +1,8 @@
 .navbar-component {
+    .nav-button {
+        display: flex;
+        align-items: center;
+    }
     nav {
         position: fixed;
         display: flex;
@@ -35,6 +39,7 @@
     .nav-menu,
     .nav_menu_list {
         display: flex;
+        align-items: center;
     }
 
     .nav-menu .nav_list {
