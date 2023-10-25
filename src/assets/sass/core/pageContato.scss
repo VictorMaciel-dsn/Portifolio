@@ -1,6 +1,7 @@
 .pagecontato-component {
     padding-inline: 10vw;
-    padding-block: 5em;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     .top-header {
         text-align: center;
@@ -177,25 +178,38 @@
         .contact-info > h2 {
             font-size: 20px;
         }
+    }
 
-        @media only screen and (min-width: 360px) and (max-width: 360px) and (min-height: 740px) and (max-height: 740px) {
-            .contact-info > p {
-                font-size: 10px;
-            }
-
-            .contact-info > h2 {
-                font-size: 18px;
-            }
+    @media only screen and (min-width: 360px) and (max-width: 360px) and (min-height: 740px) and (max-height: 740px) {
+        .contact-info > p {
+            font-size: 10px;
         }
 
-        @media only screen and (min-width: 375px) and (max-width: 375px) and (min-height: 667px) and (max-height: 667px) {
-            .contact-info > p {
-                font-size: 10px;
-            }
+        .contact-info > h2 {
+            font-size: 18px;
+        }
+    }
 
-            .contact-info > h2 {
-                font-size: 18px;
-            }
+    @media only screen and (min-width: 375px) and (max-width: 375px) and (min-height: 667px) and (max-height: 667px) {
+        .contact-info > p {
+            font-size: 10px;
+        }
+
+        .contact-info > h2 {
+            font-size: 18px;
+        }
+    }
+
+    @media only screen and (min-width: 360px) and (max-width: 360px) and (min-height: 640px) and (max-height: 640px) {
+        .top-header {
+            font-size: 13px;
+            margin-bottom: 4rem;
+        }
+        .contact-info > p {
+            font-size: 10px;
+        }
+        .contact-info > h2 {
+            font-size: 17px;
         }
     }
 }
