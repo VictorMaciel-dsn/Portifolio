@@ -212,4 +212,23 @@
             font-size: 17px;
         }
     }
+
+    @media only screen and (min-width: 320px) and (max-height: 720px) {
+        .top-header {
+            font-size: 12px;
+            margin-bottom: 4rem;
+        }
+        .contact-info > p {
+            font-size: 8px;
+        }
+        .contact-info > h2 {
+            font-size: 15px;
+        }
+        .input-field {
+            font-size: 12px;
+        }
+        textarea {
+            font-size: 12px;
+        }
+    }
 }
